@@ -1,0 +1,56 @@
+body{
+    background-color: #e9967a;
+}
+@font-face{
+    font-family: Ready;
+    src:
+}
+h1{
+    margin-left:50px;
+    color: #800000;
+}
+#fondoBio{
+    background-color: #fffefef6;
+    margin: 50px;
+}
+#envoltorioBio{
+    display:flex;
+    margin: 10px;
+}
+#fotoPepita{
+    width: 100px;
+    height: 100px;
+    border-radius: 800px;
+    margin:20px;
+}
+#envoltorioLogoMenu{
+    display: flex;
+    align-items: center;
+    margin:50px;
+    
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 800px;
+}
+#menuPrincipal{
+    margin-left: 100px;
+    
+}
+
+#menuPrincipal a{
+    padding: 20px;
+    text-decoration: none;
+    color:  #800000;
+}
+.remarcado{
+    color: orange;
+}
+#negrita{
+    font-weight:bold;
+}
+footer{
+    text-align: center;
+    margin:50px;
+}
