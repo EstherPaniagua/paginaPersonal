@@ -1,11 +1,67 @@
+
 body{
     background-color: #e9967a;
+    font-family: "Ready", serif;
 }
-
+@font-face{
+    font-family: Ready;
+    src: url(fuentes/Ready.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
 h1{
     margin-left:50px;
     color: #800000;
 }
+
+/**/
+
+/* ------------ 360 o menos ------------ */
+.envoltorio {
+    margin: 0 auto;
+    width: 100%;
+}
+.contenedorSecciones,
+.envoltorioArticulos {
+  display: flex;
+  flex-direction: column;
+}
+/*-------------------------------------*/
+
+
+/* De 361 a 960 */
+@media screen and (min-width: 361px) {
+    .envoltorio {
+      width: 360px;
+    }
+  
+    .contenedorSecciones{
+      flex-direction: row;
+      
+    }
+    section{
+        margin:10px;
+    }
+}
+  /* 961 o mas  */
+  @media screen and (min-width: 961px) {
+    .envoltorio {
+      width: 960px;
+    }
+  
+    .envoltorioArticulos {
+      flex-direction: row;
+    }
+  } 
+
+
+
+
+
+
+/**/
+
+
 #fondoBio{
     background-color: #fffefef6;
     margin: 50px;
@@ -19,20 +75,58 @@ h1{
     height: 100px;
     border-radius: 800px;
     margin:20px;
+    border:solid orange 2px;
 }
+#fotoBienvenida{
+    width:300px;
+}
+#envoltorioBienvenida{
+    display: flex;
+    justify-content: center;
+}
+@keyframes alegria{
+    0%{
+        transform:none;
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+@keyframes saludo{
+    0%{
+        transform:none;
+    }
+    50%{
+        transform:scale(2)
+    }
+    100%{
+        transform: none;
+    }
+}
+#fotoPepita:hover{
+    
+    animation: alegria 1s;
+}
+#fotoPepita:active{
+    
+    animation: saludo 3s;
+}
+
 #envoltorioLogoMenu{
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     margin:50px;
-    
+    align-items: center;
 }
 #logo{
     width: 100px;
     height: 100px;
     border-radius: 800px;
+    border:solid orange 2px;
 }
 #menuPrincipal{
     margin-left: 100px;
+    
     
 }
 
@@ -40,9 +134,25 @@ h1{
     padding: 20px;
     text-decoration: none;
     color:  #800000;
+    background-color: orange;
+    transition: border-radius 2s;
+}
+#menuPrincipal a:hover{
+    color:  #ffffff;
+    background-color:#800000;
+    border: dotted white 3px;
+    border-radius: 80px;
+}
+.iconoArticulos{
+    width: 100px;
+    height: 100px;
+    border-radius: 800px;
+    margin:20px;
+    border:solid orange 2px;
 }
 .remarcado{
     color: orange;
+    background-color: #800000;
 }
 .negrita{
     font-weight:bold;
@@ -50,6 +160,7 @@ h1{
 #envoltorioFormulario{
     display: flex;
     justify-content: center;
+    
 }
 #fondoFormulario{
     background-color:  #fffefef6;
@@ -57,11 +168,43 @@ h1{
     width: 400px;
     text-align: center;
     border-radius: 6px;
+        
 }
 .campo{
-    margin-top: 20px;
-    color:  #e9967a;
     border-radius: 6px;
+    border: transparent;
+    
+}
+input{
+    margin-top: 10px;
+    padding: 6px;
+    border: transparent;
+    
+}
+input::placeholder{
+    background-color:  #f3dfa9;
+    color: #925454;
+}
+#mensaje{
+    background-color:  #f3dfa9;
+    margin-top: 10px;
+    padding: 6px;
+    border: transparent;
+}
+textarea::placeholder{
+    color: #925454;
+}
+.botones{
+    display: flex;  
+    justify-content: space-around;
+    
+}
+#borrar,#enviar {
+    margin-bottom: 10px;
+    background-color:  #e9967a;
+    color:  #925454;
+    border-radius: 6px;
+    
 }
 footer{
     text-align: center;

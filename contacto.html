@@ -22,26 +22,33 @@
             </nav>
         </div>
     </header>
-    <main id="envoltorioFormulario">       
+    <main id="envoltorioFormulario">  
+        <form action="contacto.html" method="POST">     
             <div id="fondoFormulario"> 
 
                 <div class="campo">
-                    <input type="text" placeholder="Nombre completo">  
+                    <input type="text" placeholder="Nombre completo" size="35" autofocus>  
                 </div>
                     
                 <div class="campo">
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" size="35">
                 </div>
 
-                <div class="campo" placeholder="Teléfono">
-                    <input type="tel">
+                <div class="campo"> 
+                    <input type="tel" placeholder="Teléfono" size="35">
                 </div>
 
                 <div class="campo">
-                    <textarea name="" id="" cols="30" rows="10" ></textarea>
+                    <textarea name="mensaje" id="mensaje" cols="37" rows="10" placeholder="Mensaje" maxlength="200"></textarea>
                 </div>
 
+                <div class="botones"> 
+                    <input id="borrar" type="reset" value="Borrar">
+                    <input id="enviar" type="submit" value="Enviar">
+                </div>
+ 
             </div>
+        </form>
     </main>
     <footer>
         <small>Aviso legal: Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolores enim dignissimos fugit quibusdam aliquid molestiae. Officiis, culpa vel commodi fuga ipsam quaerat, nihil cum accusamus quod dignissimos reiciendis quis?</small>
